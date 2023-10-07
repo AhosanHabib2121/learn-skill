@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Coding Mastery",
+    "image": "https://i.ibb.co/pWq2KN9/1592866517524.jpg",
+    "price": 49.99,
+    "short_description": "Achieve expertise in programming with our comprehensive coding course."
+  },
+  {
+    "id": 2,
+    "name": "Graphic Design",
+    "image": "https://i.ibb.co/qk9w03C/graphic.jpg",
+    "price": 79.99,
+    "short_description": "Unlock your creativity and design skills with our graphic design course."
+  },
+  {
+    "id": 3,
+    "name": "Digital Marketing",
+    "image": "https://i.ibb.co/pnjdKt0/7038058.jpg",
+    "price": 59.99,
+    "short_description": "Master the art of digital marketing and grow your online presence."
+  },
+  {
+    "id": 4,
+    "name": "Data Analytics Proficiency",
+    "image": "https://i.ibb.co/SKmDm4H/istockphoto-1278695300-612x612.jpg",
+    "price": 39.99,
+    "short_description": "Become a data analysis expert and make data-driven decisions."
+  },
+  {
+    "id": 5,
+    "name": "Responsive web design",
+    "image": "https://i.ibb.co/y5VpLxS/istockphoto-485866983-612x612.jpg",
+    "price": 29.99,
+    "short_description": "Attain fluency in French with our immersive language learning program."
+  },
+  {
+    "id": 6,
+    "name": "Freelancing and interview preparation",
+    "image": "https://i.ibb.co/JHDPQpx/Freelancing-101-Why-is-Skill-Development-Important-for-Freelancing-1.webp",
+    "price": 89.99,
+    "short_description": "Develop strategic thinking and leadership skills for business success."
+  }
+]

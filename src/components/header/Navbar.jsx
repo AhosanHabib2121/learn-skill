@@ -12,11 +12,11 @@ const Navbar = () => {
         >Home</NavLink></li>
         <li><NavLink to='/service'>Service</NavLink></li>
         <li><NavLink to='/ourTeam'>Our Team</NavLink></li>
-        <li><NavLink to='/testimonial'>Testimonial</NavLink></li>
+        <li><NavLink to='/contact'>Contact us</NavLink></li>
     </>
     return (
-
-        <div className=" bg-[#042754] px-6 lg:px-0  fixed top-0 left-0 right-0">
+        // fixed top-0 left-0 right-0
+        <div className=" bg-[#042754] px-6 lg:px-0  ">
             <div className="navbar px-0 text-white py-4 max-w-6xl md:mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

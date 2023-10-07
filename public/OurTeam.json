@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "image":"https://i.ibb.co/NKNmBXx/our-team2.jpg",
+    "name": "John Doe",
+    "designation": "Web developer"
+  },
+  {
+    "id": 2,
+    "image":"https://i.ibb.co/tQhwhL1/10-2.jpg",
+    "name": "Elizabeth",
+    "designation": "Graphic Designer"
+  },
+  {
+    "id": 3,
+    "image":"https://i.ibb.co/wc8XPb6/our-team3.jpg",
+    "name": "Alice Johnson",
+    "designation": "Marketing Manager"
+  }
+]
+
+
+
+
+

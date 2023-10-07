@@ -1,0 +1,6 @@
+.ourTeam-bg-image{
+    background-image: linear-gradient(0deg, rgba(6,63,158,0.5298494397759104) 7%, rgba(10,56,125,0.711922268907563) 93%) , url('../../assets/image/our-team-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
