@@ -1,5 +1,6 @@
 import { key } from "localforage";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Service = () => {
     const [service, setService] = useState([])
@@ -26,9 +27,9 @@ const Service = () => {
                             <div className="card-body">
                                 <h2 className=" text-xl font-semibold font-poppins">{singleData.name}</h2>
                                 <h2 className="text-lg font-semibold font-poppins">{singleData.price}$</h2>
-                                <p className=" text-base font-semibold font-poppins">{singleData.short_description}</p>
+                                <p className=" text-base font-semibold font-poppins">{singleData.short_description.slice(0,110)}</p>
                                 <div className="card-actions justify-center py-2">
-                                 <button className=" bg-[#dfac04f4] text-lg px-4 py-2 rounded-lg font-medium ">Details</button>
+                                 <Link to={`/serviceDetail/${singleData.id}`} className=" bg-[#dfac04f4] text-lg px-4 py-2 rounded-lg font-medium ">Details</Link>
                                 </div>
                             </div>
                         </div>

@@ -4,9 +4,12 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import PropTypes from 'prop-types';
 
 const PrivateRoutes = ({ children }) => {
-    const { loading } = useContext(AuthContext);
+    const {user, loading } = useContext(AuthContext);
     if (loading) {
         return <p className=' bg-red-500'>loading....</p>
+    }
+    if (user) {
+        return children;
     }
 
 

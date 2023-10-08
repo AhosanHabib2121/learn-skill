@@ -3,19 +3,19 @@
     "id": 1,
     "image":"https://i.ibb.co/NKNmBXx/our-team2.jpg",
     "name": "John Doe",
-    "designation": "Web developer"
+    "designation": "Managing Director"
   },
   {
     "id": 2,
-    "image":"https://i.ibb.co/tQhwhL1/10-2.jpg",
-    "name": "Elizabeth",
-    "designation": "Graphic Designer"
+    "image":"https://i.ibb.co/yqWM1sy/pexels-august-de-richelieu-4427614.jpg",
+    "name": "Masudur Rahman",
+    "designation": "Chief Services Officer"
   },
   {
     "id": 3,
     "image":"https://i.ibb.co/wc8XPb6/our-team3.jpg",
     "name": "Alice Johnson",
-    "designation": "Marketing Manager"
+    "designation": "Chief Operation Officer"
   }
 ]
 

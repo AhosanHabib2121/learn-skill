@@ -1,44 +1,44 @@
 [
   {
     "id": 1,
-    "name": "Coding Mastery",
-    "image": "https://i.ibb.co/pWq2KN9/1592866517524.jpg",
+    "name": "Orientation",
+    "image": "https://i.ibb.co/8X9z6jQ/istockphoto-999093604-612x612.jpg",
     "price": 49.99,
-    "short_description": "Achieve expertise in programming with our comprehensive coding course."
+    "short_description": "Many new employees undergo an orientation process during their first few days at a company to learn critical information about their job position. For example, they might discuss their benefit plan with a human resources (HR) department, meet coworkers and learn about the organization's value system. Orientations are often an important step in the recruitment process, as they can be an employee's opportunity to learn how the company functions on a day-to-day basis. Depending on a company's structure, instructors may present information in a classroom environment or host one-on-one discussions."
   },
   {
     "id": 2,
-    "name": "Graphic Design",
-    "image": "https://i.ibb.co/qk9w03C/graphic.jpg",
+    "name": "Internal training",
+    "image": "https://i.ibb.co/4S7Mbnt/istockphoto-1489523193-612x612.jpg",
     "price": 79.99,
-    "short_description": "Unlock your creativity and design skills with our graphic design course."
+    "short_description": "Internal training is when current employees work with new hires to discuss skill-building techniques and other professional development goals. This process can be especially valuable when you're hiring a few employees at a time, as organizing a small-scale training seminar allows you to focus on their specific questions or concerns. Internal training can also allow new employees to receive more tailored instruction, as their instructors understand key protocols and strategies for a specific company."
   },
   {
     "id": 3,
-    "name": "Digital Marketing",
-    "image": "https://i.ibb.co/pnjdKt0/7038058.jpg",
+    "name": "Outsourced training",
+    "image": "https://i.ibb.co/Qk4zykj/istockphoto-1646501115-612x612.jpg",
     "price": 59.99,
-    "short_description": "Master the art of digital marketing and grow your online presence."
+    "short_description": "Outsourced training describes when a company hires a professional to train employees on a certain skill set. Hiring a specialized company to host a training session can help you provide information to an entire department quickly, as these professionals may have additional learning resources and strategies to better instruct large groups. They may also offer a unique perspective on workplace procedures, as they may introduce unfamiliar strategies that benefit a company's practices or streamline its operations."
   },
   {
     "id": 4,
-    "name": "Data Analytics Proficiency",
-    "image": "https://i.ibb.co/SKmDm4H/istockphoto-1278695300-612x612.jpg",
+    "name": "Industry conferences",
+    "image": "https://i.ibb.co/ryvWLt6/istockphoto-888133606-612x612.jpg",
     "price": 39.99,
-    "short_description": "Become a data analysis expert and make data-driven decisions."
+    "short_description": "Industry conferences are events where professionals meet together over a certain length of time to network with each other, share knowledge and listen to advice from hired speakers. Industry conferences can be a great way for employers to learn updated information about field-based workplace strategies, then adapt these lessons into training programs for their employees. Conferences may also provide training sessions on industry-specific skill sets through workshops and seminars."
   },
   {
     "id": 5,
-    "name": "Responsive web design",
-    "image": "https://i.ibb.co/y5VpLxS/istockphoto-485866983-612x612.jpg",
+    "name": "Management training",
+    "image": "https://i.ibb.co/0KMHhTZ/istockphoto-499517325-612x612.jpg",
     "price": 29.99,
-    "short_description": "Attain fluency in French with our immersive language learning program."
+    "short_description": "Management training teaches employees how to oversee a team effectively. Companies that promote from within may find management training useful, as these employees may require additional resources on how to perform the responsibilities of the role. Management training can be a great way to teach new managers about best practices and a company's protocols for supervisors. These employees can also use these programs to build upon the skills that earned them a promotion."
   },
   {
     "id": 6,
-    "name": "Freelancing and interview preparation",
-    "image": "https://i.ibb.co/JHDPQpx/Freelancing-101-Why-is-Skill-Development-Important-for-Freelancing-1.webp",
+    "name": "Technical skills training",
+    "image": "https://i.ibb.co/y0W5Dmd/istockphoto-1419515222-612x612.jpg",
     "price": 89.99,
-    "short_description": "Develop strategic thinking and leadership skills for business success."
+    "short_description": "Technical skills training involves teaching both newer and long-term employees how to apply their technical knowledge to their job position. Technology-based companies often provide this type of training program to software development and engineering staff, as they may require specific protocols and requirements for a computer system. Organizations from varied industries that use unique software or computer systems may also find this training program beneficial for employees."
   }
 ]

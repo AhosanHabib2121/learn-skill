@@ -9,6 +9,7 @@ const Root = () => {
             {/* outlet part here */}
             <Outlet />
             
+            
            
         </div>
     );
