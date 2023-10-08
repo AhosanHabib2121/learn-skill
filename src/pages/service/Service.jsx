@@ -1,3 +1,4 @@
+import { key } from "localforage";
 import { useEffect, useState } from "react";
 
 const Service = () => {
@@ -20,7 +21,6 @@ const Service = () => {
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     service.map(singleData => <>
-                    
                         <div className="card card-compact bg-[#042754] text-white ">
                             <figure><img src={singleData.image} className=" h-52 w-full p-4" alt="not found" /></figure>
                             <div className="card-body">

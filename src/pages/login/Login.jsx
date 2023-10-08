@@ -1,29 +1,42 @@
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 import { FcGoogle } from "react-icons/fc";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
+
 
 const Login = () => {
-    const { loginAccount, googleSignIN } = useContext(AuthContext)
-     const navigate = useNavigate()
+    const { loginAccount, googleSignIN } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const [errMessage, setErrMessage] = useState(null)
 
     const handleLogin = e => {
         e.preventDefault()
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
-        console.log(email, password)
 
+        // error message clear
+        setErrMessage('')
+        
+        if (password.length < 6) {
+            setErrMessage('Password must be 6 characters!');
+            return;
+        }
         // loginAccount
         loginAccount(email, password)
             .then(() => {
-                alert('Login successfully')
                 e.target.reset()
-                navigate('/')
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Good',
+                    text: 'Login successfully',
+                })
+                navigate('/');
             })
-            .catch(error => {
-                console.log(error.message)
+            .catch(()=> {
+                setErrMessage("Your email and password  doesn't match")
             })
      
     }
@@ -31,12 +44,24 @@ const Login = () => {
     const handleGoogle = () => {
         googleSignIN()
             .then(() => {
-                alert('Google Login successfully')
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-center',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                icon: 'success',
+                title: 'Google Login successfully'
+                })
                 navigate('/')
             })
-            .catch(error => {
-                console.log(error.message)
-            })
+            .catch()
     }
 
     return (
@@ -45,6 +70,12 @@ const Login = () => {
                 <div className="flex-col py-5 border border-blue-500 rounded-md max-w-lg mx-auto ">
                     <div className="text-center">
                         <h1 className="text-5xl font-bold pt-6 text-white">Login now!</h1>
+                    </div>
+                    <div className=' px-8 py-5'>
+                        {
+                            errMessage?<p className=' text-red-500'>{errMessage }</p>:''
+                        }
+                        
                     </div>
                     <div className="card w-full">
                         <form onSubmit={handleLogin} className=" px-8">
@@ -71,10 +102,9 @@ const Login = () => {
                             <h4 className=' text-white'>Don’t have an account? <Link to='/register' className=' text-[#dfac04f4]'>Create an account</Link></h4>
                         </div>
                         {/* google button */}
-                    <div className=" relative text-center mt-5">
-                        <button onClick={handleGoogle} className="btn bg-inherit hover:bg-inherit text-white outline-1  normal-case rounded-full w-64 border-gray-400">
-                        <FcGoogle className=" text-3xl absolute top-2 left-16 md:left-36 text-cyan-600"/>
-                                Continue with Google</button>
+                        <div className=" relative text-center mt-5">
+                             <FcGoogle className=" text-3xl absolute top-2 left-16 md:left-36 text-cyan-600"/>
+                            <button onClick={handleGoogle} className="btn bg-inherit hover:bg-inherit text-white outline-1  normal-case rounded-full w-64 border-gray-400">Continue with Google</button>
                             
                     </div>
                     </div>

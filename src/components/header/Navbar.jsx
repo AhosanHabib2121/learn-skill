@@ -3,10 +3,11 @@ import './Navbar.css';
 import logo from '../../assets/logo.png'
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-
+    console.log(user)
     const navLink = <>
         <li><NavLink
             to='/' 
@@ -22,8 +23,22 @@ const Navbar = () => {
     const handleLogout = () => {
         logOut()
             .then(() => {
-                alert('logout completed')
-            })
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                icon: 'success',
+                title: 'logout completed'
+                })
+        })
     }
 
     return (
@@ -51,7 +66,14 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user ? <Link to='/login' onClick={handleLogout} className=" bg-[#dfac04f4] px-4 py-2 rounded-lg font-medium ">Sign Out</Link>
+
+                        user ?<>
+                            <div className=" flex items-center gap-2 mr-4">
+                                <h4>{ user?.displayName}</h4>
+                                <img src={ user?.photoURL} className=" w-12 h-12 rounded-full " alt="not found" />
+                            </div> 
+                            <Link to='/login' onClick={handleLogout} className=" bg-[#dfac04f4] px-4 py-2 rounded-lg font-medium ">Sign Out</Link>
+                        </> 
                         :<Link to='/login' className=" bg-[#dfac04f4] px-4 py-2 rounded-lg font-medium ">Login</Link>
                     }
                     

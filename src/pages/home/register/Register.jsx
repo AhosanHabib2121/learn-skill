@@ -1,10 +1,12 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
-    const { registration } = useContext(AuthContext)
-     const navigate = useNavigate()
+    const { registration, profileUpdate } = useContext(AuthContext)
+    const navigate = useNavigate()
+    const [errorMessage, setErrorMessage] = useState(null);
     
     // create account
     const handleRegister = e => {
@@ -15,25 +17,51 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
 
+        // error message clean
+        setErrorMessage('')
+
+        if(password.length < 6){
+            setErrorMessage('Password must be 6 characters!')
+            return;
+        }
+        else if (!/[A-Z]/.test(password) || !/[!@#$%^&*()]/.test(password)) {
+            setErrorMessage('Please add capital letter and special character');
+            return;
+        }
+
         registration(email, password)
-            .then((data) => {
-                console.log(data.user)
-                alert('Account create successfully')
-                e.target.reset()
-                navigate('/')
+            .then(() => {
+                
+                // profileUpdate
+                profileUpdate(name, imageUrl)
+                .then(() => {
+                    Swal.fire({
+                    icon: 'success',
+                    title: 'Good',
+                    text: 'Account create successfully',
+                    })
+                    e.target.reset();
+                    navigate('/');
+                })
+                .catch()
             })
             .catch(error => {
-                console.log(error.message)
+                setErrorMessage(error.message)
             })
-
-        
     }
+
     return (
        <div className='bg-animation'>
             <div className=" pt-14 pb-24 px-8 md:px-0">
                 <div className="flex-col py-5 border border-blue-500 rounded-md max-w-lg mx-auto ">
                     <div className="text-center">
-                        <h1 className="text-5xl font-bold pt-6 text-white">Register</h1>
+                        <h1 className="text-5xl font-bold pt-6 pb-2 text-white">Register</h1>
+                    </div>
+                    <div className=' px-8 py-5'>
+                        {
+                            errorMessage?<p className=' text-red-500'>{errorMessage }</p>:''
+                        }
+                        
                     </div>
                     <div className="card w-full">
                         <form onSubmit={handleRegister} className=" px-8">
