@@ -11,10 +11,12 @@ const ServiceDetails = () => {
         <>
             <div className=" max-w-4xl mx-auto my-16">
                 <div className="card  glass card-compact bg-[#042754] text-white ">
-                    <figure><img src={singleData.image} className=" w-full p-4" alt="not found" /></figure>
+                    <figure><img src={singleData.image} className=" w-full " alt="not found" /></figure>
                     <div className="card-body">
-                        <h2 className=" text-xl font-semibold font-poppins">{singleData.name}</h2>
-                        <h2 className="text-lg font-semibold font-poppins">{singleData.price}$</h2>
+                        <div className=" flex items-center justify-between">
+                            <h2 className=" text-2xl font-semibold font-poppins">{singleData.name}</h2>
+                            <h2 className="text-lg font-semibold font-poppins">{singleData.price}$</h2>
+                        </div>
                         <p className=" text-base font-semibold font-poppins">{singleData.short_description}</p>
                 </div>
             </div>

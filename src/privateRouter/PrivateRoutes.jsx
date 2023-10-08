@@ -4,12 +4,17 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import PropTypes from 'prop-types';
 
 const PrivateRoutes = ({ children }) => {
-    const {user, loading } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
+    
     if (loading) {
-        return <p className=' bg-red-500'>loading....</p>
+        return <>
+            <div className=' text-center mt-40'>
+                <span className=" bg-black loading loading-spinner text-neutral loading-lg"></span>
+            </div>
+        </>
     }
     if (user) {
-        return children;
+        return children
     }
 
 

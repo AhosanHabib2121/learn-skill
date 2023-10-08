@@ -16,6 +16,12 @@ const Navbar = () => {
         >Home</NavLink></li>
         <li><NavLink to='/service'>Service</NavLink></li>
         <li><NavLink to='/ourTeam'>Our Team</NavLink></li>
+        {
+            user ? <>
+                <li><NavLink to='/event'>Event</NavLink></li> 
+                <li><NavLink to='/careers'>Careers</NavLink></li>
+            </>: ''
+        }
         <li><NavLink to='/contact'>Contact us</NavLink></li>
     </>
     // logout
