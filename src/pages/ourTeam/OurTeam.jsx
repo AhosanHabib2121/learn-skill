@@ -10,6 +10,7 @@ const OurTeam = () => {
             .then(res => res.json())
             .then(ourTeamData => setOurTeam(ourTeamData))
     }, [])
+
     return (
         <div className="ourTeam-bg-image py-20">
             <div className=" max-w-6xl mx-auto px-8 lg:px-0">

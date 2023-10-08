@@ -1,11 +1,21 @@
 import PropTypes from 'prop-types'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const SingleTeam = ({ singleTeam }) => {
     const {image, name, designation } = singleTeam;
 
+    useEffect(() => {
+        AOS.init(
+            {
+                duration: 2000
+            }
+        );
+    }, [])
     return (
         <div>
-            <div className="card  bg-base-100 shadow-xl">
+            <div className="card  bg-base-100 shadow-xl" data-aos="fade-up">
             <figure className="px-5 pt-10">
                 <img src={image} alt="not found" className="rounded-full w-40 h-40" />
             </figure>
