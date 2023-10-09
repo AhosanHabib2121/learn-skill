@@ -1,8 +1,14 @@
-# React + Vite
+# Learn Skill
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+live link : [https://65238772ada01b37d4383444--superb-cobbler-099bbc.netlify.app/](https://65238772ada01b37d4383444--superb-cobbler-099bbc.netlify.app/)
 
-Currently, two official plugins are available:
+## 5 Project features:
+- First of all selected by education event, then thought about what the website design would be thinked and search by googleed  and it has to be checked whether it is within the given condition.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Then I setup the project and install all required packages like react router training  etc.
+
+- First the designer works first then the functionality works.
+
+- Functionality  first by completing the email authentication tasks,firebase install and setup then conditional rendering.
+
+- Finally the login data username and user photo are shown in navbar

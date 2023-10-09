@@ -2,7 +2,10 @@ import Footer from "../../components/footer/Footer";
 import eventPhoto from '../../assets/image/event-photo.jpg'
 import { useEffect, useState } from "react";
 
+ 
+
 const Event = () => {
+    
 
     const [service, setService] = useState([])
 
@@ -12,8 +15,10 @@ const Event = () => {
             .then(serviceData => setService(serviceData))
     }, [])
 
+
     return (
         <div>
+            
             <div className=" max-w-6xl mx-auto my-20 px-8 lg:px-0">
                 {/* upcoming events here */}
                 <div >
