@@ -1,6 +1,6 @@
 # Project name : Learn Skill
 
-live link : [https://65238772ada01b37d4383444--superb-cobbler-099bbc.netlify.app/](https://65238772ada01b37d4383444--superb-cobbler-099bbc.netlify.app/)
+live link : [https://learn-skill-94bf0.web.app/](https://learn-skill-94bf0.web.app/)
 
 ## 5 Project features:
 - First of all selected by education event, then thought about what the website design would be thinked and search by googleed  and it has to be checked whether it is within the given condition.
