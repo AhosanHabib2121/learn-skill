@@ -9,7 +9,7 @@ const ServiceDetails = () => {
 
     return (
         <>
-            <div className=" max-w-4xl mx-auto my-16">
+            <div className=" max-w-4xl mx-auto my-16 px-8 lg:px-0">
                 <div className="card  glass card-compact bg-[#042754] text-white ">
                     <figure><img src={singleData.image} className=" w-full " alt="not found" /></figure>
                     <div className="card-body">

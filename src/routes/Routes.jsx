@@ -8,6 +8,9 @@ import ServiceDetails from "../pages/serviceDetails/ServiceDetails";
 import PrivateRoutes from "../privateRouter/PrivateRoutes";
 import Event from "../pages/event/Event";
 import Careers from "../pages/careers/Careers";
+import ServicePage from "../pages/service/ServicePage";
+import OurTeamPage from "../pages/ourTeam/OurTeamPage";
+import ContactPage from "../pages/contact/ContactPage";
 
 const myCreateRouter = createBrowserRouter([
   {
@@ -33,14 +36,25 @@ const myCreateRouter = createBrowserRouter([
         element: <PrivateRoutes><ServiceDetails/></PrivateRoutes>
       },
       {
+        path: '/service',
+        element: <ServicePage/>
+      },
+      {
+        path: '/ourTeam',
+        element: <OurTeamPage/>
+      },
+      {
         path: '/event',
         element: <Event/>
       },
       {
         path: '/careers',
         element: <PrivateRoutes><Careers/></PrivateRoutes>
+      },
+      {
+        path: '/contact',
+        element: <ContactPage/>
       }
-
         
     ]
   },

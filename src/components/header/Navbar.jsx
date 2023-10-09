@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import './Navbar.css';
 import logo from '../../assets/logo.png'
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from 'sweetalert2';
 
@@ -15,7 +15,7 @@ const Navbar = () => {
                 isPending ? "pending" : isActive ? "active" : ""
             }
         >Home</NavLink></li>
-        <li><NavLink >Service</NavLink></li>
+        <li><NavLink to='/service' >Service</NavLink></li>
         <li><NavLink to='/ourTeam'>Our Team</NavLink></li>
         {
             user ? <>
