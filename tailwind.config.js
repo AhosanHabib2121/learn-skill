@@ -10,6 +10,9 @@ export default {
         poppins: 'Poppins, sans - serif',
       }
     },
+    daisyui: {
+      themes: ["dark", "light"],
+    },
   },
   plugins: [require("daisyui")],
 }
